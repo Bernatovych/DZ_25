@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Temperature in Kyiv</h2>
+<div class="row">
+{% for i in qs %}
+    <div class="card col-2" style="width: 18rem;">
+        <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item"><h1>{{ i.degree }}</h1></li>
+            <li class="list-group-item"><h5>{{ i.name }}</h5></li>
+        </ul>
+    </div>
+{% else %}
+    <h3>Empty...</h3>
+{% endfor %}
+</div>
+{% endblock %}
+

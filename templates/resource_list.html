@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Resource <a class="btn btn-success btn-sm" href="/create_resource"> Add</a></h2>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>title</th>
+            <th>url</th>
+            <th>element</th>
+            <th>attribute</th>
+            <th>value</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in qs %}
+        <tr>
+            <td> {{ i.title }} </td>
+            <td> {{ i.url }} </td>
+            <td> {{ i.element }} </td>
+            <td> {{ i.attribute }} </td>
+            <td> {{ i.value }} </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td>Empty...</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

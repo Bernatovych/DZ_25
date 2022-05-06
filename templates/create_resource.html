@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-6 offset-3">
+    <div class="alert alert-success text-center">
+    <h1>Create resource</h1>
+    <form action="/create_resource" method="post">
+        <p>
+            <input id="title" name="title" type="text" required placeholder="title" size=40 autofocus/>
+        </p>
+        <p>
+            <input id="url" name="url" type="url" required placeholder="url" size=40 autofocus/>
+        </p>
+        <p>
+            <input id="element" name="element" type="text" required placeholder="element(div, p , li ....)" size=40 autofocus/>
+        </p>
+        <p>
+            <input id="attribute" name="attribute" type="text" required placeholder="attribute(id, class)" size=40 autofocus/>
+        </p>
+        <p>
+            <input id="value" name="value" type="text" required placeholder="attribute value" size=40 autofocus/>
+        </p>
+        <input type="submit" value="submit"/>
+    </form>
+    </div>
+</div>
+{% endblock %}
